@@ -17,7 +17,7 @@ public class ConfigurationReader {
 
     // We want to open the properties file and load to properties object ONLY ONCE before reading
     // having static block because static runs first
-    {
+   static  {
 
         try{
         // 2- Create the object of FileInputStream

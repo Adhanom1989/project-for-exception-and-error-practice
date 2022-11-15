@@ -14,11 +14,19 @@ public class LoginStepDefs {
 
     @Given("user on the login page")
     public void user_on_the_login_page() {
-        Driver.getDriver().get(ConfigurationReader.getProperty("url"));
+        String url = ConfigurationReader.getProperty("env");
+        System.out.println("=================");
+
+        System.out.println(url);
+
+        System.out.println("=================");
+
+        Driver.getDriver().get(url);
     }
 
     @When("user enter valid {string} and {string}")
     public void user_enter_valid_and(String username, String password) {
+
         loginPage.login(username, password);
     }
 

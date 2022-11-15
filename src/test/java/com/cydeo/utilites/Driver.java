@@ -7,7 +7,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.util.concurrent.TimeUnit;
 
-public class Driver {
+public  class Driver {
 
     /*
      Creating a private constructor, so we are closing access to the object of this class
@@ -30,7 +30,9 @@ public class Driver {
         if(driverPool.get() == null){  // if driver/browser was never opened
 
         String browserType = ConfigurationReader.getProperty("browser");
-
+            System.out.println("=================");
+            System.out.println(browserType);
+            System.out.println("=================");
         /*
         Depending on the browserType our switch statement will determine
         to open specific type of browser/driver
@@ -59,8 +61,8 @@ public class Driver {
 
     public static void closeDriver(){
         if(driverPool.get() != null) {
-          //  driverPool.get().quit(); // this line will kill the session. value will not be null
-         //   driverPool.remove();
+            driverPool.get().quit(); // this line will kill the session. value will not be null
+            driverPool.remove();
         }
     }
 

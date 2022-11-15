@@ -13,9 +13,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
                 "me.jvt.cucumber.report.PrettyReports:target/cucumber"
         },
         features = "src/test/resources/features" ,
-        glue = "com/cydeo/step_definitions" ,
+        glue = "com/cydeo/step_defs" ,
         dryRun = false,
-        tags = "@smoke"
+        tags = "@us_01"
 )
 public class CukesRunner {
 
